@@ -22,12 +22,14 @@ resource "aws_vpc" "myvpc" {
     cidr_block = var.cidr
 }
 
+
 resource "aws_subnet" "mysubnet" {
     vpc_id  = aws_vpc.myvpc.id
     cidr_block = var.subnet-cidr
     availability_zone = "${var.region}a"
     map_public_ip_on_launch = true
 }
+
 
 resource "aws_internet_gateway" "myigw" {
     vpc_id = aws_vpc.myvpc.id
