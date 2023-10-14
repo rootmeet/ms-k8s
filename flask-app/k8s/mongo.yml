@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: mongo
+  namespace: taskmastermongo
   labels:
       app: mongo
 spec:
@@ -17,7 +18,7 @@ spec:
       containers:
         - name: mongo
           image: mongo
-          imagePullPolicy: ifNotPresent
+          imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 27017
           volumeMounts:

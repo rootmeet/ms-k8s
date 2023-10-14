@@ -4,6 +4,7 @@ metadata:
   labels:
     app: mongo
   name: mongo
+  namespace: taskmastermongo
 spec:
   ports:
     - port: 27017

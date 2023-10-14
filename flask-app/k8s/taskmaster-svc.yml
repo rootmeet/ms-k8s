@@ -2,6 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: taskmaster-svc
+  namespace: taskmastermongo
 spec:
   selector:
     app: taskmaster
