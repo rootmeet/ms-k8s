@@ -103,10 +103,10 @@ resource "aws_instance" "k8s-master" {
         private_key = file("id_rsa")  # Replace with the path to your private key
         host        = self.public_ip
     }
-
+  
     provisioner "remote-exec" {
         inline = [
-            "sudo apt-get update -y"
+        "sudo apt-get update -y",
         ]
     }
 }
