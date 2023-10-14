@@ -5,6 +5,7 @@ metadata:
   labels:
       app: mongo
 spec:
+  replicas: 1
   selector:
     matchLabels:
       app: mongo
@@ -16,11 +17,12 @@ spec:
       containers:
         - name: mongo
           image: mongo
+          imagePullPolicy: ifNotPresent
           ports:
             - containerPort: 27017
           volumeMounts:
             - name: storage
-              mountPath: /data/db
+              mountPath: "/data/db"
       volumes:
         - name: storage
           persistentVolumeClaim:

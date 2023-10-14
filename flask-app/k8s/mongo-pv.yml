@@ -7,7 +7,6 @@ spec:
     storage: 256Mi
   volumeMode: Filesystem
   accessModes:
-    - ReadWriteOnce
-  persistentVolumeReclaimPolicy: Retain
+    - ReadWriteOnce #  persistentVolumeReclaimPolicy: Retain
   hostPath:
-    path: /home/node/mongodata
+    path: /tmp/db

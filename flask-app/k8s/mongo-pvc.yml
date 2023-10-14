@@ -4,7 +4,7 @@ metadata:
   name: mongo-pvc
 spec:
   accessModes:
-    - ReadWriteOnce
+    - ReadWriteOnce #  volumeName: mongo-pv
   resources:
     requests:
       storage: 256Mi
